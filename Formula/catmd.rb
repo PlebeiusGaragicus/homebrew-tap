@@ -13,8 +13,9 @@ class Catmd < Formula
 
     libexec.install "dist", "theme.json", "package.json", "node_modules"
 
-    (bin/"catmd").write_env_script <<~EOS, PATH: "#{Formula["node@22"].opt_bin}:$PATH"
+    (bin/"catmd").write <<~EOS
       #!/bin/bash
+      export PATH="#{Formula["node@22"].opt_bin}:$PATH"
       export CATMD_THEME="${CATMD_THEME:-#{libexec}/theme.json}"
       exec "#{Formula["node@22"].opt_bin}/node" "#{libexec}/dist/cli.js" "$@"
     EOS
