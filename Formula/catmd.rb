@@ -1,8 +1,9 @@
 class Catmd < Formula
   desc "Terminal markdown renderer (cat for .md files)"
   homepage "https://github.com/PlebeiusGaragicus/catmd"
+  url "https://github.com/PlebeiusGaragicus/catmd/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "be7f9f0a10dbf4b508b14ace2ba363bd437773b01897d3ae9bb547dced51938f"
   license "MIT"
-  head "https://github.com/PlebeiusGaragicus/catmd.git", branch: "main"
 
   depends_on "node@22"
 
